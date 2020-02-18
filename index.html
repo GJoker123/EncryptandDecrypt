@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ENCRYPT AND DECRYPT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Decrypt Or Encrypt Any Message!</h1>
+        <section>
+            <li>To Use:</li>
+            <li>Select a Number from 1 to 7 for the Key.</li>
+            <li>Please enter a Sentence or Sequence.</li>
+            <li>Select whether you are Encrypting or Decrypting.</li>
+        </section>
+    </div>
+<br>
+
+    <div class="container">
+        <p style="display: inline">Key:</p>
+        <select id="myList">
+            <option selected="selected" value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+            <option value="4">four</option>
+            <option value="5">five</option>
+            <option value="6">six</option>
+            <option value="7">seven</option>
+        </select>
+        <br>
+        <br>
+         <p style="display: inline">Input: </p>
+        <input id="inputtext" name="intext" type="text"> <br>
+        <br>
+        <p style="display: inline">Output: </p>
+        <p id="result"></p>
+        <br>
+        <input type="radio" id="ENC" name="translate" value="encrypt">Encrypt
+        <input type="radio" id="DEC" name="translate" value="decrypt">Decrypt <br>
+        <br>
+        <input id="button" type="submit" value="Enter" onclick="process()">
+        <input id="button" type="submit" value="Clear" onclick="Clear()">
+    </div>
+    <footer id="footer">
+        <p style="font-size: 25px;"><strong> Designed by Gabriel &copy; </strong></p>
+    </footer>
+
+    <script src="javascript/react.js"></script>
+</body></html>

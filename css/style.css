@@ -1,0 +1,28 @@
+body{
+    background-color: lightcoral;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+     font-size: 25px;
+}
+#inputtext{
+    font-size: 25px;
+}
+#myList{
+    width: 80px; 
+    height: 30px; 
+    font-size: 20px;
+}
+#button{
+    font-size: 30px;
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: lightcoral;
+    text-align: center;
+    
+}
