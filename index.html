@@ -4,25 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>ENCRYPT AND DECRYPT</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Decrypt Or Encrypt Any Message!</h1>
+        <div>
+            <h1>Decrypt Or Encrypt Any Message!</h1>
+        </div>
+
         <section>
-            <li>To Use:</li>
+            <p>To Use:</p>
             <li>Select a Number from 1 to 7 for the Key.</li>
             <li>Please enter a Sentence or Sequence.</li>
             <li>Select whether you are Encrypting or Decrypting.</li>
+            <li>Press Enter!</li>
         </section>
     </div>
-<br>
+    <br>
 
     <div class="container">
-        <p style="display: inline">Key:</p>
-        <select id="myList">
+        <p style="display: inline;">Key:</p>
+        <select class="alert-secondary" style="border: 1px solid black" id="myList">
             <option selected="selected" value="1">one</option>
             <option value="2">two</option>
             <option value="3">three</option>
@@ -33,21 +38,39 @@
         </select>
         <br>
         <br>
-         <p style="display: inline">Input: </p>
-        <input id="inputtext" name="intext" type="text"> <br>
-        <br>
-        <p style="display: inline">Output: </p>
-        <p id="result"></p>
-        <br>
-        <input type="radio" id="ENC" name="translate" value="encrypt">Encrypt
-        <input type="radio" id="DEC" name="translate" value="decrypt">Decrypt <br>
-        <br>
-        <input id="button" type="submit" value="Enter" onclick="process()">
-        <input id="button" type="submit" value="Clear" onclick="Clear()">
+        <p style="display: inline">Input: </p>
+        <input id="inputtext" class="alert-secondary" style="border: 1px solid black;" name="intext" type="text"> <br>
     </div>
+    <br>
+    
+    <div class="container">
+        <label class="btn btn-primary" onclick="reset()">
+            <input type="radio" id="ENC" name="translate" value="encrypt" checked>Encrypt
+        </label>
+        <label class="btn btn-primary" onclick="reset()">
+            <input type="radio" id="DEC" name="translate" value="decrypt">Decrypt <br>
+        </label>
+        <br>
+        <button id="button" class="btn btn-success" type="submit" value="Enter" onclick="process()">Enter</button>
+        <button id="button" class="btn btn-info" type="submit" value="Clear" onclick="Clear()">Clear</button>
+    </div>
+    <br>
+    <div class="container">
+        
+        <p>Output:  </p>
+        <p id="result"><p>
+        <div id="spin" class="spinner-border text-primary" role="status" style="visibility: hidden">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
     <footer id="footer">
-        <p style="font-size: 25px;"><strong> Designed by Gabriel &copy; </strong></p>
+        <p style="font-size: 15px;"><strong> Designed by Gabriel &copy; </strong></p>
     </footer>
 
-    <script src="javascript/react.js"></script>
-</body></html>
+
+</body>
+<script src="javascript/react.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script></html>
